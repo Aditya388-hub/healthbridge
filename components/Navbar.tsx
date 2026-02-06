@@ -27,9 +27,20 @@ export default function Navbar() {
     return (
         <nav className={styles.navbar}>
             <div className={`container ${styles.container}`}>
-                <Link href="/" className={styles.logo}>
-                    <span className={styles.brandPrimary}>Health</span>
-                    <span className={styles.brandSecondary}>Bridge</span>
+                <Link href="https://tinyurl.com/projecthealthbridgeakas" target="_blank" rel="noopener noreferrer" className={styles.brandWrapper}>
+                    <div className={styles.branding}>
+                        <div className={styles.logoIcon}>
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.heartPulseSVG}>
+                                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor" opacity="0.2" />
+                                <path d="M2.05 8.5C2.05 5.45 4.5 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3c3 0 5.45 2.45 5.45 5.5 0 3.78-3.4 6.86-8.55 11.54L12 21.35l-1.45-1.32C5.4 15.36 2.05 12.28 2.05 8.5z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+                                <path d="M6 10h2l1-3 2 6 1-3h2" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
+                        <div className={styles.brandText}>
+                            <span className={styles.mainTitle}>PROJECT HEALTHBRIDGE</span>
+                            <span className={styles.subTitle}>STUDENT LED INITIATIVE</span>
+                        </div>
+                    </div>
                 </Link>
 
                 {/* Mobile Menu Button */}
@@ -57,7 +68,6 @@ export default function Navbar() {
                     {user ? (
                         <div className={styles.userProfile}>
                             <div className={styles.avatar}>{user.username.charAt(0).toUpperCase()}</div>
-                            {/* <span className={styles.username}>{user.username}</span> */}
                         </div>
                     ) : (
                         <Link href="/onboarding" className={styles.getStarted}>Get Started</Link>
@@ -67,3 +77,4 @@ export default function Navbar() {
         </nav>
     );
 }
+
