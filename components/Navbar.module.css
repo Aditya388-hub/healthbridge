@@ -1,127 +1,165 @@
 .navbar {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border-bottom: 1px solid var(--border);
+        padding: 1rem 0;
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 2px;
+.brandWrapper {
+        text-decoration: none;
+        transition: transform 0.2s ease;
+        flex-shrink: 0;
 }
 
-.brandPrimary {
-    color: hsl(var(--secondary));
+.brandWrapper:hover {
+        transform: scale(1.02);
 }
 
-.brandSecondary {
-    color: hsl(var(--primary));
+.branding {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+}
+
+.logoIcon {
+        width: 38px;
+        height: 38px;
+        background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        padding: 6px;
+        box-shadow: 0 4px 12px rgba(var(--primary) / 0.2);
+}
+
+.heartPulseSVG {
+        width: 100%;
+        height: 100%;
+}
+
+.brandText {
+        display: flex;
+        flex-direction: column;
+        line-height: 1.1;
+}
+
+.mainTitle {
+        font-size: 0.9rem;
+        font-weight: 800;
+        letter-spacing: 0.05em;
+        color: hsl(var(--foreground));
+}
+
+.subTitle {
+        font-size: 0.6rem;
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        color: hsl(var(--secondary));
+        opacity: 0.9;
 }
 
 .navLinks {
-    display: flex;
-    gap: 1.5rem;
-    align-items: center;
+        display: flex;
+        gap: 1.5rem;
+        align-items: center;
 }
 
 .navLink {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    text-decoration: none;
-    font-weight: 500;
-    color: hsl(var(--foreground));
-    padding: 0.5rem 0.75rem;
-    border-radius: var(--radius);
-    transition: all 0.2s ease;
-    opacity: 0.7;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+        font-weight: 500;
+        color: hsl(var(--foreground));
+        padding: 0.5rem 0.75rem;
+        border-radius: var(--radius);
+        transition: all 0.2s ease;
+        opacity: 0.7;
 }
 
 .navLink:hover {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.05);
+        opacity: 1;
+        background-color: rgba(0, 0, 0, 0.05);
 }
 
 .navLink.active {
-    opacity: 1;
-    color: hsl(var(--primary));
-    background-color: hsla(var(--primary) / 0.1);
+        opacity: 1;
+        color: hsl(var(--primary));
+        background-color: hsla(var(--primary) / 0.1);
 }
 
 .mobileMenuBtn {
-    display: none;
-    color: hsl(var(--foreground));
+        display: none;
+        color: hsl(var(--foreground));
 }
 
 .getStarted {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
-    color: white;
-    padding: 0.5rem 1.25rem;
-    border-radius: 2rem;
-    text-decoration: none;
-    font-weight: 600;
-    transition: opacity 0.2s;
+        background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+        color: white;
+        padding: 0.5rem 1.25rem;
+        border-radius: 2rem;
+        text-decoration: none;
+        font-weight: 600;
+        transition: opacity 0.2s;
 }
 
 .getStarted:hover {
-    opacity: 0.9;
+         opacity: 0.9;
 }
 
 .userProfile {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
 }
 
 .avatar {
-    width: 36px;
-    height: 36px;
-    background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
+        width: 36px;
+        height: 36px;
+        background: linear-gradient(135deg, hsl(var(--accent)), hsl(var(--primary)));
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 700;
 }
 
 @media (max-width: 768px) {
-    .mobileMenuBtn {
-        display: block;
-    }
+        .mobileMenuBtn {
+                    display: block;
+        }
 
     .navLinks {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        background: hsl(var(--background));
-        flex-direction: column;
-        padding: 1rem;
-        gap: 1rem;
-        border-bottom: 1px solid var(--border);
-        display: none;
+                position: absolute;
+                   top: 100%;
+                left: 0;
+                right: 0;
+                background: hsl(var(--background));
+                flex-direction: column;
+                padding: 1rem;
+                gap: 1rem;
+                border-bottom: 1px solid var(--border);
+                display: none;
     }
 
     .navLinks.show {
-        display: flex;
+                display: flex;
     }
 
     .navLink {
-        width: 100%;
+                width: 100%;
     }
 }
