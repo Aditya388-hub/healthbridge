@@ -27,7 +27,7 @@ export default function Navbar() {
     return (
         <nav className={styles.navbar}>
             <div className={`container ${styles.container}`}>
-                <Link href="https://tinyurl.com/projecthealthbridgeakas" target="_blank" rel="noopener noreferrer" className={styles.brandWrapper}>
+                <Link href="/" className={styles.brandWrapper}>
                     <div className={styles.branding}>
                         <div className={styles.logoIcon}>
                             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className={styles.heartPulseSVG}>
